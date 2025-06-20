@@ -1,0 +1,451 @@
+STATISTICAL ANALYSIS SUMMARY REPORT
+================================================================================
+
+Generated: 2025-06-20T16:33:24.460636
+Analysis Configuration:
+- Predictor Variable: nytSalience
+- Measurement Variables: Authentic
+- Binary Variable: Marks
+- Variable Type: categorical
+- Data Shape: (1240, 94)
+
+STAGE 1: COMPREHENSIVE SUMMARY STATISTICS
+==================================================
+
+Summary Statistics for Authentic:
+----------------------------------------
+Overall (N=1240): Mean=22.6766, Median=21.2300, SD=9.3151
+Marks_0 (N=550): Mean=22.2807, Median=20.7750, SD=9.3530
+Marks_1 (N=690): Mean=22.9922, Median=21.5800, SD=9.2794
+nytSalience_0.0 (N=803): Mean=22.6400, Median=21.2500
+nytSalience_1.0 (N=437): Mean=22.7439, Median=21.2000
+
+Cross-tabulation statistics:
+nytSalience_0.0_Marks_0 (N=336): Mean=22.2419, Median=20.7450
+nytSalience_0.0_Marks_1 (N=467): Mean=22.9265, Median=21.6300
+nytSalience_1.0_Marks_0 (N=214): Mean=22.3417, Median=21.0700
+nytSalience_1.0_Marks_1 (N=223): Mean=23.1298, Median=21.5400
+
+
+DETAILED STATISTICAL TEST RESULTS
+==================================================
+
+
+Test Results for Authentic:
+========================================
+
+STAGE 1 INITIAL TESTS:
+-------------------------
+
+  pairwise_test:
+    Test: Mann-Whitney U test
+    Statistic: 175474.0000
+    p-value: 0.9976
+    Group descriptives:
+      Marks=0 (N=592): Mean=22.1801, Median=20.5000, SD=9.3256
+      Marks=1 (N=729): Mean=22.8889, Median=21.5400, SD=9.3006
+
+OVERALL ANALYSIS:
+-----------------
+
+  nytSalience_0.0_treatment_vs_control:
+    Test: Wilcoxon signed-rank test: nytSalience=0.0 treatment vs control
+    Statistic: 27104.0000
+    p-value: 0.5592
+    Group descriptives:
+      Treatment (N=467): Mean=22.9265, Median=21.6300, SD=9.2530
+      Control (N=336): Mean=22.2419, Median=20.7450, SD=9.0321
+      Chatterjee's ξ (treatment effect): 0.1266, p = 0.0000, significant = True
+
+  nytSalience_1.0_treatment_vs_control:
+    Test: Wilcoxon signed-rank test: nytSalience=1.0 treatment vs control
+    Statistic: 10406.5000
+    p-value: 0.2268
+    Group descriptives:
+      Treatment (N=223): Mean=23.1298, Median=21.5400, SD=9.3125
+      Control (N=214): Mean=22.3417, Median=21.0700, SD=9.8146
+      Chatterjee's ξ (treatment effect): 0.0665, p = 0.0140, significant = True
+
+SUBGROUP ANALYSIS:
+------------------
+
+  Marks_0:
+    Test: Wilcoxon signed-rank test (samples adjusted to equal size) (non-normal binary)
+    Statistic: 11145.0000
+    p-value: 0.6934
+
+  Marks_1:
+    Test: Wilcoxon signed-rank test (samples adjusted to equal size) (non-normal binary)
+    Statistic: 12305.5000
+    p-value: 0.8499
+
+  epps_singleton_within_groups:
+    Test: chatterjee_xi_multiple_categories
+
+  chatterjee_xi_within_groups:
+    Test: chatterjee_xi_within_groups
+
+BETWEEN GROUPS ANALYSIS:
+-----------------------
+
+  separate_marks_analysis:
+
+  Marks_0:
+
+  follow_up_test:
+    Test: one_way_anova
+
+  Marks_1:
+
+  follow_up_test:
+    Test: one_way_anova
+
+
+COMPLETE CONSOLE OUTPUT:
+==================================================
+
+Data loaded successfully. Shape: (2321, 94)
+Columns: ['Unnamed: 0.1', 'Unnamed: 0', 'caseId', 'docketId', 'caseIssuesId', 'voteId', 'dateDecision', 'decisionType', 'usCite', 'sctCite', 'ledCite', 'lexisCite', 'term', 'naturalCourt', 'chief', 'docket', 'caseName', 'dateArgument', 'dateRearg', 'petitioner', 'petitionerState', 'respondent', 'respondentState', 'jurisdiction', 'adminAction', 'adminActionState', 'threeJudgeFdc', 'caseOrigin', 'caseOriginState', 'caseSource', 'caseSourceState', 'lcDisagreement', 'certReason', 'lcDisposition', 'lcDispositionDirection', 'declarationUncon', 'caseDisposition', 'caseDispositionUnusual', 'partyWinning', 'precedentAlteration', 'voteUnclear', 'issue', 'issueArea', 'decisionDirection', 'decisionDirectionDissent', 'authorityDecision1', 'authorityDecision2', 'lawType', 'lawSupp', 'lawMinor', 'majOpinWriter', 'majOpinAssigner', 'splitVote', 'majVotes', 'minVotes', 'justice', 'justiceName', 'vote', 'opinion', 'direction', 'majority', 'firstAgreement', 'secondAgreement', 'Marks', 'original_filename', 'Analytic', 'Clout', 'Authentic', 'Tone', 'WPS', 'BigWords', 'Cognition', 'allnone', 'cogproc', 'insight', 'cause', 'discrep', 'tentat', 'certitude', 'differ', 'mqScore', 'scQual', 'scIdeology', 'nytSalience', 'cqSalience', 'final_length', 'citations_weight', 'mqavg', 'mqstd', 'mqdist', 'cog_complex', 'salience', 'main', 'cog_inc']
+Using all data for analysis: (2321, 94)
+Binary variable 'Marks' has values: [0, 1]
+Data after removing missing values: (1240, 94)
+Converting 'nytSalience' from float to integer (all values are whole numbers)
+Variable 'nytSalience' will be analyzed as: categorical
+Binary variable for subgroup analysis: Marks
+
+============================================================
+ANALYZING MEASUREMENT VARIABLE: Authentic
+============================================================
+
+============================================================
+STAGE 1: COMPREHENSIVE SUMMARY STATISTICS
+Target: Authentic, Predictor: nytSalience (categorical), Binary: Marks
+============================================================
+
+--- Summary by Marks groups ---
+Marks=0 (n=550): Mean=22.2807, Median=20.7750, SD=9.3530
+Marks=1 (n=690): Mean=22.9922, Median=21.5800, SD=9.2794
+
+--- Overall summary for Authentic ---
+Overall (n=1240): Mean=22.6766, Median=21.2300, SD=9.3151
+
+--- Summary by nytSalience categories ---
+nytSalience=0.0 (n=803): Mean=22.6400, Median=21.2500
+nytSalience=1.0 (n=437): Mean=22.7439, Median=21.2000
+
+--- Cross-tabulation: nytSalience × Marks ---
+nytSalience=0.0, Marks=0 (n=336): Mean=22.2419, Median=20.7450
+nytSalience=0.0, Marks=1 (n=467): Mean=22.9265, Median=21.6300
+nytSalience=1.0, Marks=0 (n=214): Mean=22.3417, Median=21.0700
+nytSalience=1.0, Marks=1 (n=223): Mean=23.1298, Median=21.5400
+
+Stage 1 Summary Statistics completed successfully
+
+============================================================
+TARGET NORMALITY ASSESSMENT FOR Authentic
+============================================================
+Target variable normality: Normal: False (α = 0.05), n = 1240
+  Shapiro-Wilk: W = 0.9456, p = 0.0000
+
+--- STAGE 1 INITIAL TESTS ---
+Testing nytSalience vs Authentic
+Binary grouping variable: Marks
+
+Binary categorical predictor: Pairwise t-tests across samples
+  Mann-Whitney U test: statistic = 175474.000, p = 0.998, n = 1240, |r| = 0.000
+  Group sizes: 0.0 (n=803), 1.0 (n=437)
+
+============================================================
+TWO-SAMPLE TESTS FOR Authentic
+============================================================
+Control population (Marks=0): n=550
+
+--- nytSalience=0.0: Treatment vs Control Groups ---
+Treatment group (Marks=1): n=467
+  Mean ± SD: 22.927 ± 9.253
+  Median: 21.630
+Control group (Marks=0): n=336
+  Mean ± SD: 22.242 ± 9.032
+  Median: 20.745
+Chatterjee's ξ (treatment effect): 0.1266, p = 0.0000
+Wilcoxon signed-rank test: statistic = 27104.0000, p = 0.5592
+
+--- nytSalience=1.0: Treatment vs Control Groups ---
+Treatment group (Marks=1): n=223
+  Mean ± SD: 23.130 ± 9.312
+  Median: 21.540
+Control group (Marks=0): n=214
+  Mean ± SD: 22.342 ± 9.815
+  Median: 21.070
+Chatterjee's ξ (treatment effect): 0.0665, p = 0.0140
+Wilcoxon signed-rank test: statistic = 10406.5000, p = 0.2268
+
+============================================================
+THREE-SAMPLE CONTINGENCY ANALYSIS FOR Authentic
+============================================================
+
+--- MEDIAN TESTS BY MARKS GROUPS ---
+Testing Authentic medians across nytSalience categories within each Marks group
+Not all Marks groups are normal - using Chi-square tests within each group + overall
+
+Marks=0 Chi-square test:
+  χ² = 27.0618, df = 1, p = 0.0000
+  Effect size = 0.222 (Weak association)
+  Sample size: n = 550
+  Category distribution: {'0.0': 336, '1.0': 214}
+
+Marks=1 Chi-square test:
+  χ² = 86.2841, df = 1, p = 0.0000
+  Effect size = 0.354 (Moderate association)
+  Sample size: n = 690
+  Category distribution: {'0.0': 467, '1.0': 223}
+
+Combined/Overall Chi-square Test:
+  Chi-square: χ² = 5.5391, df = 1, p = 0.0186
+  Cramér's V = 0.067 (Negligible association)
+  Sample size: n = 1240
+  Contingency table shape: (2, 2)
+
+Three-Test Summary:
+  1. Marks=0: 27.0618 (p=0.0000)
+  2. Marks=1: 86.2841 (p=0.0000)
+  3. Combined: χ² = 5.5391 (p=0.0186)
+
+Interaction Effect (ratio between group effect sizes): 1.59:1
+  Marks_0: effect size = 0.2218
+  Marks_1: effect size = 0.3536
+
+Median tests analysis completed successfully
+
+============================================================
+WITHIN-GROUPS TESTS FOR Authentic
+============================================================
+
+--- Within Marks=0 Group (N=550) ---
+Variable 'nytSalience' detected as: categorical
+Wilcoxon signed-rank test (samples adjusted to equal size) (non-normal binary):
+Statistic = 11145.0000
+p-value = 0.6934
+
+--- Within Marks=1 Group (N=690) ---
+Variable 'nytSalience' detected as: categorical
+Wilcoxon signed-rank test (samples adjusted to equal size) (non-normal binary):
+Statistic = 12305.5000
+p-value = 0.8499
+
+--- ENHANCED EPPS-SINGLETON WITHIN-GROUPS TESTS ---
+Category variable nytSalience has 2 unique values
+Using Chatterjee Xi analysis for 2-category variable
+Running association analysis on all groups (binary and category groupings)
+
+--- CHATTERJEE XI WITHIN-GROUPS ANALYSIS ---
+Testing association between nytSalience and Authentic
+Within each Marks group AND within each nytSalience group
+
+--- ANALYSIS BY MARKS GROUPS ---
+
+--- Marks=0 Group (n=550) ---
+  Chatterjee's ξ = 0.0919
+  p-value = 0.0003
+  Significant: True
+
+--- Marks=1 Group (n=690) ---
+  Chatterjee's ξ = 0.1022
+  p-value = 0.0000
+  Significant: True
+
+--- ANALYSIS BY NYTSALIENCE CATEGORY GROUPS ---
+
+--- nytSalience=0.0 Group (n=803) ---
+  Chatterjee's ξ = 0.1266
+  p-value = 0.0000
+  Significant: True
+
+--- nytSalience=1.0 Group (n=437) ---
+  Chatterjee's ξ = 0.0665
+  p-value = 0.0140
+  Significant: True
+
+--- BINARY GROUPS INTERACTION EFFECT ANALYSIS ---
+ξ ratio: 1.11 (Negligible)
+Stronger association: Marks_1 (ξ = 0.1022)
+Weaker association: Marks_0 (ξ = 0.0919)
+Effect ratio: 1.11:1
+Interpretation: Negligible interaction effect: Association is 1.11x stronger in Marks_1
+
+--- CATEGORY GROUPS INTERACTION EFFECT ANALYSIS ---
+Comparing Xi values across nytSalience categories:
+  nytSalience_0.0: ξ = 0.1266
+  nytSalience_1.0: ξ = 0.0665
+Xi range: 0.0601 (Negligible variation)
+Strongest association: nytSalience_0.0 (ξ = 0.1266)
+Weakest association: nytSalience_1.0 (ξ = 0.0665)
+Interpretation: Negligible variation across categories: Xi ranges from 0.066 to 0.127
+
+Chatterjee Xi analysis results:
+  Binary groups analysis:
+    Marks_0: ξ = 0.0919, p = 0.0003
+    Marks_1: ξ = 0.1022, p = 0.0000
+  Category groups analysis:
+    nytSalience_0.0: ξ = 0.1266, p = 0.0000
+    nytSalience_1.0: ξ = 0.0665, p = 0.0140
+
+  Within Marks=0 across categories:
+    Kruskal-Wallis: H = 0.0002, p = 0.9901
+
+  Within Marks=1 across categories:
+    Kruskal-Wallis: H = 0.0196, p = 0.8888
+
+--- CHATTERJEE XI WITHIN-GROUPS ANALYSIS ---
+Testing association between nytSalience and Authentic
+Within each Marks group AND within each nytSalience group
+
+--- ANALYSIS BY MARKS GROUPS ---
+
+--- Marks=0 Group (n=550) ---
+  Chatterjee's ξ = 0.0919
+  p-value = 0.0003
+  Significant: True
+
+--- Marks=1 Group (n=690) ---
+  Chatterjee's ξ = 0.1022
+  p-value = 0.0000
+  Significant: True
+
+--- ANALYSIS BY NYTSALIENCE CATEGORY GROUPS ---
+
+--- nytSalience=0.0 Group (n=803) ---
+  Chatterjee's ξ = 0.1266
+  p-value = 0.0000
+  Significant: True
+
+--- nytSalience=1.0 Group (n=437) ---
+  Chatterjee's ξ = 0.0665
+  p-value = 0.0140
+  Significant: True
+
+--- BINARY GROUPS INTERACTION EFFECT ANALYSIS ---
+ξ ratio: 1.11 (Negligible)
+Stronger association: Marks_1 (ξ = 0.1022)
+Weaker association: Marks_0 (ξ = 0.0919)
+Effect ratio: 1.11:1
+Interpretation: Negligible interaction effect: Association is 1.11x stronger in Marks_1
+
+--- CATEGORY GROUPS INTERACTION EFFECT ANALYSIS ---
+Comparing Xi values across nytSalience categories:
+  nytSalience_0.0: ξ = 0.1266
+  nytSalience_1.0: ξ = 0.0665
+Xi range: 0.0601 (Negligible variation)
+Strongest association: nytSalience_0.0 (ξ = 0.1266)
+Weakest association: nytSalience_1.0 (ξ = 0.0665)
+Interpretation: Negligible variation across categories: Xi ranges from 0.066 to 0.127
+
+============================================================
+BETWEEN-GROUPS TESTS FOR Authentic
+============================================================
+
+--- VARIANCE-BASED ACROSS-GROUPS TESTS ---
+Testing Authentic across categories of nytSalience
+Running separate tests for each Marks group
+
+--- Analysis for Marks=0 ---
+  nytSalience=0.0: n=336
+  nytSalience=1.0: n=214
+  Variance Equality Test (Levene): statistic=0.6881, p=0.4072
+  Equal variances: True
+  → Equal variances assumed: Using one-way ANOVA
+  One-Way ANOVA Test Results:
+    Number of groups: 2
+    F-statistic: 0.0149
+    p-value: 0.9030
+    Significant: False
+    Effect size (eta-squared): 0.0000
+    Degrees of freedom: (1, 548)
+    Group labels: ['0.0', '1.0']
+    Group sizes: [336, 214]
+    Interpretation: No significant difference between group means
+
+--- Analysis for Marks=1 ---
+  nytSalience=0.0: n=467
+  nytSalience=1.0: n=223
+  Variance Equality Test (Levene): statistic=0.0126, p=0.9106
+  Equal variances: True
+  → Equal variances assumed: Using one-way ANOVA
+  One-Way ANOVA Test Results:
+    Number of groups: 2
+    F-statistic: 0.0723
+    p-value: 0.7880
+    Significant: False
+    Effect size (eta-squared): 0.0001
+    Degrees of freedom: (1, 688)
+    Group labels: ['0.0', '1.0']
+    Group sizes: [467, 223]
+    Interpretation: No significant difference between group means
+
+============================================================
+DESCRIPTIVE STATISTICS SUMMARY FOR Authentic
+============================================================
+
+OVERALL STATISTICS (N=1240):
+  Mean ± SD: 22.6766 ± 9.3151
+  Median [Q1, Q3]: 21.2300 [16.2075, 27.5600]
+  Range: 1.9400 - 71.9200
+
+DESCRIPTIVES BY MARKS TREATMENT:
+
+Marks=0 (n=550):
+  Mean ± SD: 22.2807 ± 9.3530
+  Median [Q1, Q3]: 20.7750 [15.5725, 26.9975]
+  Range: 1.9400 - 71.9200
+
+Marks=1 (n=690):
+  Mean ± SD: 22.9922 ± 9.2794
+  Median [Q1, Q3]: 21.5800 [16.6325, 28.0025]
+  Range: 4.2600 - 67.5000
+
+DESCRIPTIVES BY NYTSALIENCE CATEGORY:
+
+nytSalience=0.0 (n=803):
+  Mean ± SD: 22.6400 ± 9.1731
+  Median [Q1, Q3]: 21.2500 [16.2050, 27.5300]
+  Range: 4.2600 - 67.5000
+
+nytSalience=1.0 (n=437):
+  Mean ± SD: 22.7439 ± 9.5808
+  Median [Q1, Q3]: 21.2000 [16.2200, 27.7200]
+  Range: 1.9400 - 71.9200
+
+CROSS-TABULATION DESCRIPTIVES (NYTSALIENCE × MARKS):
+
+nytSalience=0.0, Marks=0 (n=336):
+  Mean ± SD: 22.2419 ± 9.0456
+  Median [Q1, Q3]: 20.7450 [15.4550, 26.7950]
+  Range: 7.8900 - 66.1200
+
+nytSalience=0.0, Marks=1 (n=467):
+  Mean ± SD: 22.9265 ± 9.2629
+  Median [Q1, Q3]: 21.6300 [16.6950, 28.0450]
+  Range: 4.2600 - 67.5000
+
+nytSalience=1.0, Marks=0 (n=214):
+  Mean ± SD: 22.3417 ± 9.8377
+  Median [Q1, Q3]: 21.0700 [15.7450, 27.3775]
+  Range: 1.9400 - 71.9200
+
+nytSalience=1.0, Marks=1 (n=223):
+  Mean ± SD: 23.1298 ± 9.3334
+  Median [Q1, Q3]: 21.5400 [16.5300, 27.9200]
+  Range: 8.0300 - 56.5600
+
+CROSS-TABULATION COUNT TABLE (nytSalience × Marks):
+Marks          0    1   All
+nytSalience                
+0.0          336  467   803
+1.0          214  223   437
+All          550  690  1240
+
+CROSS-TABULATION MEANS TABLE (nytSalience × Marks):
+Marks              0        1
+nytSalience                  
+0.0          22.2419  22.9265
+1.0          22.3417  23.1298

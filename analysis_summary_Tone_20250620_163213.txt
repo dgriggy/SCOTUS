@@ -1,0 +1,231 @@
+STATISTICAL ANALYSIS SUMMARY REPORT
+================================================================================
+
+Generated: 2025-06-20T16:32:13.410837
+Analysis Configuration:
+- Predictor Variable: Tone
+- Measurement Variables: Authentic
+- Binary Variable: Marks
+- Variable Type: continuous
+- Data Shape: (1321, 94)
+
+STAGE 1: COMPREHENSIVE SUMMARY STATISTICS
+==================================================
+
+Summary Statistics for Authentic:
+----------------------------------------
+Overall (N=1321): Mean=22.5713, Median=21.1000, SD=9.3150
+Marks_0 (N=592): Mean=22.1801, Median=20.5000, SD=9.3256
+Marks_1 (N=729): Mean=22.8889, Median=21.5400, SD=9.3006
+
+
+DETAILED STATISTICAL TEST RESULTS
+==================================================
+
+
+Test Results for Authentic:
+========================================
+
+STAGE 1 INITIAL TESTS:
+-------------------------
+
+  correlation_test:
+    Test: Spearman correlation
+    Statistic: 0.1098
+    p-value: 0.0001
+
+  regression_consistency_test:
+    Test: Fisher z-test: regression consistency across Marks
+    Statistic: 0.0799
+    p-value: 0.9363
+
+OVERALL ANALYSIS:
+-----------------
+
+  continuous_correlation_treatment:
+    Test: Spearman correlation: Tone vs Authentic in treatment group
+    Statistic: 0.1081
+    p-value: 0.0035
+    Effect size: ρ = 0.108
+
+  continuous_correlation_control:
+    Test: Spearman correlation: Tone vs Authentic in control group
+    Statistic: 0.1125
+    p-value: 0.0061
+    Effect size: ρ = 0.112
+
+SUBGROUP ANALYSIS:
+------------------
+
+  Marks_0:
+    Test: Spearman Correlation (continuous predictor)
+    Statistic: 0.1125
+    p-value: 0.0061
+    Effect size: ρ = 0.112
+
+  Marks_1:
+    Test: Spearman Correlation (continuous predictor)
+    Statistic: 0.1081
+    p-value: 0.0035
+    Effect size: ρ = 0.108
+
+  chatterjee_xi_within_groups:
+    Test: chatterjee_xi_within_groups
+
+
+COMPLETE CONSOLE OUTPUT:
+==================================================
+
+Data loaded successfully. Shape: (2321, 94)
+Columns: ['Unnamed: 0.1', 'Unnamed: 0', 'caseId', 'docketId', 'caseIssuesId', 'voteId', 'dateDecision', 'decisionType', 'usCite', 'sctCite', 'ledCite', 'lexisCite', 'term', 'naturalCourt', 'chief', 'docket', 'caseName', 'dateArgument', 'dateRearg', 'petitioner', 'petitionerState', 'respondent', 'respondentState', 'jurisdiction', 'adminAction', 'adminActionState', 'threeJudgeFdc', 'caseOrigin', 'caseOriginState', 'caseSource', 'caseSourceState', 'lcDisagreement', 'certReason', 'lcDisposition', 'lcDispositionDirection', 'declarationUncon', 'caseDisposition', 'caseDispositionUnusual', 'partyWinning', 'precedentAlteration', 'voteUnclear', 'issue', 'issueArea', 'decisionDirection', 'decisionDirectionDissent', 'authorityDecision1', 'authorityDecision2', 'lawType', 'lawSupp', 'lawMinor', 'majOpinWriter', 'majOpinAssigner', 'splitVote', 'majVotes', 'minVotes', 'justice', 'justiceName', 'vote', 'opinion', 'direction', 'majority', 'firstAgreement', 'secondAgreement', 'Marks', 'original_filename', 'Analytic', 'Clout', 'Authentic', 'Tone', 'WPS', 'BigWords', 'Cognition', 'allnone', 'cogproc', 'insight', 'cause', 'discrep', 'tentat', 'certitude', 'differ', 'mqScore', 'scQual', 'scIdeology', 'nytSalience', 'cqSalience', 'final_length', 'citations_weight', 'mqavg', 'mqstd', 'mqdist', 'cog_complex', 'salience', 'main', 'cog_inc']
+Using all data for analysis: (2321, 94)
+Binary variable 'Marks' has values: [0, 1]
+Data after removing missing values: (1321, 94)
+Variable 'Tone' will be analyzed as: continuous
+Binary variable for subgroup analysis: Marks
+
+============================================================
+ANALYZING MEASUREMENT VARIABLE: Authentic
+============================================================
+
+============================================================
+STAGE 1: COMPREHENSIVE SUMMARY STATISTICS
+Target: Authentic, Predictor: Tone (continuous), Binary: Marks
+============================================================
+
+--- Summary by Marks groups ---
+Marks=0 (n=592): Mean=22.1801, Median=20.5000, SD=9.3256
+Marks=1 (n=729): Mean=22.8889, Median=21.5400, SD=9.3006
+
+--- Overall summary for Authentic ---
+Overall (n=1321): Mean=22.5713, Median=21.1000, SD=9.3150
+
+--- Tone is continuous: no category-based groupings ---
+
+--- Summary for continuous predictor Tone ---
+Tone overall (n=1321): Mean=23.5940, Median=22.9700, SD=13.0862
+Tone for Marks=0 (n=592): Mean=23.7042, Median=22.6850, SD=13.0944
+Tone for Marks=1 (n=729): Mean=23.5046, Median=23.1600, SD=13.0879
+
+Stage 1 Summary Statistics completed successfully
+
+============================================================
+TARGET NORMALITY ASSESSMENT FOR Authentic
+============================================================
+Target variable normality: Normal: False (α = 0.05), n = 1321
+  Shapiro-Wilk: W = 0.9471, p = 0.0000
+
+--- STAGE 1 INITIAL TESTS ---
+Testing Tone vs Authentic
+Binary grouping variable: Marks
+
+Continuous predictor analysis:
+  Spearman correlation: statistic = 0.110, p < .001***, n = 1321, ρ = 0.110
+
+--- REGRESSION CONSISTENCY T-TEST (CONTINUOUS ONLY) ---
+  Fisher z-test for correlation consistency:
+    Marks=0: r = 0.1125 (n=592)
+    Marks=1: r = 0.1081 (n=729)
+    z-statistic = 0.0799, p = 0.9363
+    Interpretation: Correlations do not differ significantly
+
+============================================================
+TWO-SAMPLE TESTS FOR Authentic
+============================================================
+
+--- Continuous Variable Correlation Analysis ---
+Treatment group (Marks=1): n=729
+Control group (Marks=0): n=592
+Treatment group - Spearman correlation: r = 0.1081, p = 0.0035
+  Effect size: ρ = 0.108
+Control group - Spearman correlation: r = 0.1125, p = 0.0061
+  Effect size: ρ = 0.112
+
+============================================================
+THREE-SAMPLE CONTINGENCY ANALYSIS FOR Authentic
+============================================================
+
+--- MULTI-REGRESSION ANALYSIS ---
+Dependent: Authentic, Predictors: Tone + Marks + interaction
+Sample size: n = 1321
+Full Model R² = 0.0133, F = 5.9126, p = 0.0005
+F-statistic computed via statsmodels OLS regression (model.fvalue)
+Coefficients:
+  Tone: β = 0.0801, p = 0.0060
+  Marks: β = 0.8373, p = 0.4287
+  Interaction: β = -0.0048, p = 0.9027
+
+============================================================
+WITHIN-GROUPS TESTS FOR Authentic
+============================================================
+
+--- Within Marks=0 Group (N=592) ---
+Variable 'Tone' detected as: continuous
+Spearman Correlation (continuous predictor):
+Statistic = 0.1125
+p-value = 0.0061
+Effect size: ρ = 0.112
+
+--- Within Marks=1 Group (N=729) ---
+Variable 'Tone' detected as: continuous
+Spearman Correlation (continuous predictor):
+Statistic = 0.1081
+p-value = 0.0035
+Effect size: ρ = 0.108
+
+--- CHATTERJEE XI WITHIN-GROUPS ANALYSIS ---
+Testing association between Tone and Authentic
+Within each Marks group AND within each Tone group
+
+--- ANALYSIS BY MARKS GROUPS ---
+
+--- Marks=0 Group (n=592) ---
+  Chatterjee's ξ = 0.0037
+  p-value = 0.4434
+  Significant: False
+
+--- Marks=1 Group (n=729) ---
+  Chatterjee's ξ = 0.0419
+  p-value = 0.0367
+  Significant: True
+
+--- ANALYSIS BY TONE CATEGORY GROUPS ---
+Skipping category group analysis for continuous variable Tone
+
+--- BINARY GROUPS INTERACTION EFFECT ANALYSIS ---
+ξ ratio: 11.34 (Large)
+Stronger association: Marks_1 (ξ = 0.0419)
+Weaker association: Marks_0 (ξ = 0.0037)
+Effect ratio: 11.34:1
+Interpretation: Large interaction effect: Association is 11.34x stronger in Marks_1
+
+============================================================
+BETWEEN-GROUPS TESTS FOR Authentic
+============================================================
+
+============================================================
+BETWEEN-GROUPS TESTS FOR Authentic (Continuous Predictor)
+============================================================
+Comparing Marks=0 vs Marks=1
+Group sizes: Marks=0 (n=592), Marks=1 (n=729)
+
+============================================================
+DESCRIPTIVE STATISTICS SUMMARY FOR Authentic
+============================================================
+
+OVERALL STATISTICS (N=1321):
+  Mean ± SD: 22.5713 ± 9.3150
+  Median [Q1, Q3]: 21.1000 [16.0300, 27.6500]
+  Range: 1.9400 - 71.9200
+
+DESCRIPTIVES BY MARKS TREATMENT:
+
+Marks=0 (n=592):
+  Mean ± SD: 22.1801 ± 9.3256
+  Median [Q1, Q3]: 20.5000 [15.5475, 27.0225]
+  Range: 1.9400 - 71.9200
+
+Marks=1 (n=729):
+  Mean ± SD: 22.8889 ± 9.3006
+  Median [Q1, Q3]: 21.5400 [16.4700, 27.9500]
+  Range: 4.2600 - 67.5000
