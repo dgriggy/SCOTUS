@@ -1,0 +1,178 @@
+# Configurable Neural Architectures for Hypothesis Testing
+
+## Overview
+
+Recent advances in neural architecture design have created powerful new frameworks for statistical hypothesis testing, integrating traditional statistical priors with deep learning flexibility. The field has evolved from simple neural networks to sophisticated configurable architectures that can encode competing hypotheses, handle hierarchical data, and test distributional changes—with particularly promising applications in social science research.
+
+## Key Breakthrough: CInA (Causal Inference with Attention)
+
+The most significant breakthrough is the theoretical connection between attention mechanisms and statistical inference. CInA proves that trained self-attention can find optimal covariate balancing weights for causal inference, enabling **zero-shot causal inference capabilities** without per-dataset optimization.
+
+## Statistical Priors Integration
+
+### Composite Kernel Frameworks
+
+Modern neural architectures incorporate statistical knowledge through innovative kernel compositions:
+
+- **Implicit Composite Kernel (ICK) Framework**: Combines neural networks with Gaussian Process priors
+  - Mathematical formulation: `k_composite(x,x') = k_NN(x,x') + k_prior(x,x')`
+  - Balances data-driven learning with expert knowledge about correlations, seasonality, and spatial relationships
+
+### Attention-Based Prior Encoding
+
+- Attention mechanisms compute scores as `f(expert_knowledge, latent_features)`
+- Direct integration of correlation coefficients and effect sizes into network predictions
+- Particularly effective in educational software for knowledge tracing
+
+### Advanced Prior Techniques
+
+- **Trace-class Gaussian priors**: Address initialization challenges in Bayesian neural networks
+- **Weight-initialization conditioned priors**: Tackle cold posterior effect while maintaining uncertainty quantification
+
+## Encoding Competing Hypotheses
+
+### Bayesian Causal Forest Neural Networks
+
+State-of-the-art approach using separate networks:
+- Prognosis function: `μ(X)`
+- Treatment effect function: `τ(X)`
+- Parameterization: `Y = μ(X) + W×τ(X) + ε`
+
+Can test H₁ (treatment effect exists) vs H₂ (no treatment effect) with uncertainty quantification.
+
+### Circuit Hypothesis Testing
+
+Formal hypothesis testing procedures for neural network circuits:
+- Behavior preservation tests
+- Localization degree assessments
+- Minimality criteria
+
+### Causal Deep Learning Architectures
+
+- Support both forward (cause → effect) and inverse (effect → cause) hypothesis testing
+- Use causal capsules for invariant factor representations
+- Tensor transformations govern factor interactions
+
+### DragonNet and TARNet Extensions
+
+- **DragonNet**: Three separate heads (control outcome, treatment outcome, propensity score)
+- **TARNet**: Treatment-agnostic representation with explicit architectural separation
+
+## Hierarchical Data Handling
+
+### HAT-Net (Hierarchical Attention Transformers)
+
+- Computational complexity reduction: `O(H²W²)` → `O(HW + (H/r)(W/r))`
+- Essential for nested social science data (students within schools, patients within hospitals)
+
+### Neural Network-based Causal Graph Constraints (NN-CGC)
+
+- Implements Independent Causal Mechanisms principles
+- 15-25% improvements in Precision in Estimation of Heterogeneous Effects (PEHE)
+
+### FasterViT Architectures
+
+- Carrier tokens initialize pooled tokens per window
+- Multi-level attention approach for hierarchical treatment effect analysis
+
+### CATENets Framework
+
+Neural implementations of multiple meta-learners:
+- S-learner
+- T-learner  
+- DR-learner
+
+Designed specifically for hierarchical data structures with theoretical guarantees.
+
+## Neural Approaches for Distributional Change Testing
+
+### Distribution Regression Frameworks
+
+- Model conditional distribution functions
+- Enable testing of distributional treatment effects beyond simple mean differences
+- Support quantile treatment effects and full distributional comparisons
+
+### Neural Two-Sample Testing
+
+- Combines kernel-based approaches with neural feature extraction
+- Tests for covariate shift and treatment effect heterogeneity
+- Ensures finite-sample validity through permutation testing
+
+### GANITE and Extensions
+
+- Use generative adversarial networks for counterfactual outcome distributions
+- Handle multiple treatment types (binary, categorical, continuous)
+- Incorporate uncertainty quantification through adversarial training
+
+### Wasserstein Distance Minimization
+
+- Uses neural networks to learn optimal transport maps
+- Provides principled distributional balance with interpretable transformations
+
+## Social Science Applications
+
+### Economics
+
+**Economic Growth Prediction**: Neural networks trained on satellite imagery test spatial development theories
+- R² values: 0.85-0.91 for income predictions
+- Spatial resolution: 1.2 km grid cells vs 51.9 km county averages
+
+### Psychology
+
+**Personality Psychology**: Configurable neural architectures test trait stability vs variability theories
+- Adjustable motivational parameters
+- Address temporal stability and within-subject variability questions
+
+### Political Science
+
+**Text Analysis**: Neural networks with active learning for political communication patterns
+- Test theories about sentiment and messaging effectiveness
+- Adapt to different theoretical assumptions about political behavior
+
+### Neuroscience
+
+**Brain Network Causal Inference**: Test hypotheses about cognitive control and decision-making
+- fMRI-based studies of fronto-parietal-striatal connectivity
+- Test competing theories about neural mechanisms underlying reasoning
+
+### General Framework
+
+**GOBI (General ODE-Based Inference)**: Publicly available system for testing monotonic ODE models in social systems
+
+## Implementation Frameworks
+
+### Software Ecosystem
+
+- **PyTorch-based**: `torch-hypothesis` packages for social science applications
+- **CATENets**: Comprehensive implementations of neural meta-learners
+- **Computational Social Science**: Berkeley training programs integrate GNNs, NLP, and causal inference
+
+### Practical Deployment
+
+**Spotify's A/B Testing**: Neural network-enhanced testing with:
+- Encouragement designs with instrumental variables
+- Multi-armed bandit approaches with neural optimization
+- Dynamic treatment allocation based on real-time results
+
+## Key Advantages
+
+1. **Integration of Statistical Priors**: Seamless incorporation of domain knowledge
+2. **Hypothesis Encoding**: Direct architectural representation of competing theories
+3. **Hierarchical Data Support**: Specialized handling of nested data structures
+4. **Distributional Testing**: Beyond mean differences to full distributional comparisons
+5. **Theoretical Guarantees**: Maintained statistical rigor with neural flexibility
+
+## Remaining Challenges
+
+1. **Scalability**: Extension to very large models
+2. **Theoretical Understanding**: Deeper comprehension of statistical-neural connections
+3. **Inference Efficiency**: More efficient procedures for complex hierarchical structures
+4. **Interpretability**: Maintaining explainability while increasing complexity
+
+## Conclusion
+
+The convergence of statistical theory and neural architecture design has created unprecedented opportunities for hypothesis testing in complex domains. Modern configurable neural networks successfully bridge the gap between traditional statistical methods and deep learning capabilities, offering principled approaches to scientific discovery across multiple disciplines.
+
+---
+
+*This summary represents the current state of configurable neural architectures for hypothesis testing as of 2024-2025, with demonstrated applications across economics, psychology, political science, and neuroscience.*
